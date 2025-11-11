@@ -1,0 +1,164 @@
+// FORKED FROM: https://github.com/sejjy/mechabar/tree/main
+// MIT LICENSE
+// Updated By: PrinceDevel
+// Also Linked With Wallust Theme Engine
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    // "margin-left": 10,
+    // "margin-right": 10,
+    // "margin-top": 0,
+    // "margin-bottom": 7,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
+    // "spacing": 1,
+	"modules-left": [
+		"group/user",
+		"custom/left_div#1",
+		"hyprland/workspaces#mechabar",
+		"custom/right_div#1",
+		"hyprland/window"
+	],
+	"modules-center": [
+        "tray",
+		"hyprland/windowcount",
+		"custom/left_div#2",
+		"temperature",
+		"custom/left_div#3",
+		"memory",
+		"custom/left_div#4",
+		"cpu",
+		"custom/left_inv#1",
+		"custom/left_div#5",
+		"custom/distro",
+		"custom/right_div#2",
+		"custom/right_inv#1",
+		"idle_inhibitor",
+		"clock#time",
+		"custom/right_div#3",
+		"clock#date",
+		"custom/right_div#4",
+		"network",
+		"bluetooth",
+		// "custom/system_update",
+        "custom/notification",
+		"custom/right_div#5"
+	],
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+ 			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 3
+		},
+		"on-scroll-up": "hyprctl dispatch workspace +1",
+		"on-scroll-down": "hyprctl dispatch workspace -1",
+		"cursor": true
+	},
+	"modules-right": [
+		"mpd",
+		"custom/left_div#6",
+		"group/pulseaudio",
+		"custom/left_div#7",
+		"backlight",
+		"custom/left_div#8",
+		"battery",
+		"custom/left_inv#2",
+		"custom/power_menu"
+	],
+
+    "group/user": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/trigger",
+			"custom/user"
+		]
+	},
+	"custom/trigger": {
+		"format": "  ",
+		"tooltip": false
+	},
+	"custom/user": {
+		"exec": "id -un",
+		"format": "{}",
+		"tooltip": false
+	},
+    "custom/left_div#1": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_div#2": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_div#3": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_div#4": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_div#5": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_div#6": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_div#7": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_div#8": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_inv#1": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left_inv#2": {
+		"format": "",
+		"tooltip": false
+	},
+
+	/*--------------------
+		right dividers
+	--------------------*/
+
+	"custom/right_div#1": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right_div#2": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right_div#3": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right_div#4": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right_div#5": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right_inv#1": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/distro": {
+		"format": "",
+		"tooltip": false
+	}
+}

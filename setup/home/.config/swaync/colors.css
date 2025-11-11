@@ -1,0 +1,30 @@
+:root {
+    --wallpaper: url("/home/devel/ui-data/wallpapers/wall_japan_city_two_girls.jpg");
+
+    /* Special */
+    --background: 16,20,19;
+    --foreground: 255,249,220;
+    --cursor: 255,249,220;
+    --accent1: 58,126,205;
+    --accent2: 46,101,164;
+    --accent3: 35,76,123;
+    --accent4: 17,38,62;
+
+    /* Colors */
+    --color0:  47,51,51;
+    --color1:  197,101,85;
+    --color2:  47,141,95;
+    --color3:  152,155,0;
+    --color4:  58,126,205;
+    --color5:  205,58,145;
+    --color6:  0,183,191;
+    --color7:  255,249,220;
+    --color8:  81,85,85;
+    --color9:  255,111,90;
+    --color10: 0,153,79;
+    --color11: 203,207,0;
+    --color12: 13,124,255;
+    --color13: 255,0,150;
+    --color14: 0,244,255;
+    --color15: 255,249,220;
+}

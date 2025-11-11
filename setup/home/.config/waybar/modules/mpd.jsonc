@@ -1,0 +1,27 @@
+{
+"mpd": {
+    "format": "{stateIcon} [{elapsedTime:%M:%S}] {title}",
+    "format-paused": "{stateIcon} [{elapsedTime:%M:%S}]",
+    "format-disconnected": "",
+    "interval": 10,
+    "consume-icons": {
+        "on": " " // Icon shows only when "consume" is on
+    },
+    "random-icons": {
+        "on": " "
+    },
+    "repeat-icons": {
+        "on": " "
+    },
+    "single-icons": {
+        "on": "1 "
+    },
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    },
+	"max-length": 25,
+    "tooltip-format": "Name: {title}\n{stateIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S})\nMode -> {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}\nArtist: {artist}\nAlbum: {album}",
+    "on-click": "rmpc togglepause"
+}
+}

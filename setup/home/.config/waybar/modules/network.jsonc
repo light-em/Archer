@@ -1,0 +1,31 @@
+{
+	"network": {
+		// "interface":
+		"interval": 10,
+		// "family":
+		"format": "󰤨",
+		"format-ethernet": "󰈀",
+		"format-wifi": "{icon}",
+		// "format-linked":
+		"format-disconnected": "󰤯",
+		"format-disabled": "󰖪",
+		// "format-alt":
+		"format-icons": [
+			"󰤟", "󰤢", "󰤥", "󰤨"
+		],
+		// "rotate":
+		"min-length": 1,
+		"max-length": 1,
+		// "on-click-middle":
+        "on-click": "kitty --title run-script-output-dialog-float -e nmtui",
+		"on-click-right": "nmcli radio wifi off && notify-send 'Wi-Fi Disabled' -i 'network-wireless-off' -r 1125",
+		// "on-scroll-up":
+		// "on-scroll-down":
+		// "smooth-scrolling-threshold":
+		// "tooltip":
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency} GHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+		// "tooltip-format-wifi": "Network: {essid}\nIP Addr: {ipaddr}/{cidr}\nStrength: {signalStrength}%\nFrequency: {frequency} GHz",
+		"tooltip-format-disconnected": "Wi-Fi Disconnected",
+		"tooltip-format-disabled": "Wi-Fi Disabled"
+	}
+}

@@ -1,0 +1,148 @@
+/* // FORKED FROM: https://github.com/sejjy/mechabar/tree/main */
+/* // MIT LICENSE */
+/* // Rewritten By: PrinceDevel */
+/* // Also Linked With Wallust Theme Engine */
+
+@import "theme.css";
+
+* {
+    all: initial;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+window { font-size: 16px; color: white; }
+
+#custom-user,
+#window label,
+#mpd,
+tooltip label {
+	font-weight: normal;
+}
+#workspaces button.active label,
+#custom-distro {
+	font-size: 1.375em;
+    padding-right: 5px;
+    min-width: 1.2em;
+    background-color: @accent;
+    color: @main-bg;
+}
+#custom-power_menu { font-size: 1.25em; }
+#custom-left_div, #custom-left_inv, #custom-right_div, #custom-right_inv { font-size: 1.4em; }
+#waybar > box {
+    margin: 0px 5px;
+    border: 3px solid @outline;
+    padding: 4px 8px;
+    background-color: @main-bg;
+    border-radius: 8px;
+}
+tooltip, #tray menu {
+	border: 2px solid @tooltip-col;
+	border-radius: 10px;
+	background-color: @main-bg;
+}
+tooltip > box, #tray menu { padding: 2px 6px; }
+#windowcount { margin: 0px 4px; color: @hover-fg; }
+#network, #bluetooth, #custom-notification { padding-left: 8px; }
+#custom-notification { padding-right: 8px; } 
+#mpd { padding: 0 12px; }
+#custom-power_menu {
+	border-radius: 16px;
+	padding: 0 19px 0 16px;
+}
+#custom-user { padding-right: 12px; }
+#workspaces { padding: 0 1px; }
+#workspaces button {
+	border-radius: 16px;
+	min-width: 16px;
+	padding: 0 10px;
+}
+#window { margin-left: 12px; }
+#network, #bluetooth, #custom-power_menu, #custom-notification { font-size: 1.2em;  }
+#network { padding-right: 0.375em; }
+
+#pulseaudio.input, #pulseaudio.output, #backlight, #battery { padding-right: 0.4em; }
+#cpu, #memory, #temperature, #clock.date, #clock.time  { padding: 0px 0.4em; }
+
+#custom-left_div.1, #custom-right_div.1, #custom-left_div.2, #custom-right_div.5, #custom-left_div.6 
+{ color: @accent3; }
+#workspaces,#workspaces button.active label,  #custom-left_div.7, #pulseaudio, #wireplumber, #custom-left_div.7, #temperature, #network, #bluetooth, #custom-notification, #custom-left_div.3, #custom-right_div.4 
+{ background-color: @accent3; }
+#custom-left_div.7, #custom-left_div.3, #custom-right_div.4 
+{ color: @accent2; }
+#custom-left_div.8, #backlight, #memory, #clock.date, #custom-left_div.4, #custom-right_div.3 
+{ background-color: @accent2; }
+#custom-left_inv.2, #custom-left_div.8, #custom-left_div.4, #custom-right_div.3 
+{ color: @accent1; }
+#battery, #cpu, #idle_inhibitor, #clock.time 
+{ background-color: @accent1; }
+#custom-left_inv.1, #custom-right_inv.1 
+{ color: @accent1; }
+#workspaces button.active label, #custom-power_menu, #custom-left_div.5, #custom-right_div.2 
+{ color: @accent; }
+#custom-power_menu:hover, #workspace button:hover { background-color: @hover-bg; }
+#workspaces button:hover { color: @hover-fg; }
+
+#cpu, #memory, #temperature, #bluetooth, #network { color: shade(@color4, 1.6); }
+#mpd, #battery { padding: 0.25em 0.75em; }
+#windowcount, #window { color: shade(@accent, 2); }
+#clock.date, #clock.time { color: shade(@color5, 1.6); }
+#battery { color: shade(@color10, 1.5); }
+
+#custom-trigger:hover,
+#idle_inhibitor:hover,
+#clock.date:hover,
+#network:hover,
+#bluetooth:hover,
+#custom-system_update:hover,
+#mpris:hover,
+#pulseaudio:hover,
+#wireplumber:hover {
+	color: @hover-fg;
+}
+
+/*--------------
+	disabled
+---------------*/
+
+#idle_inhibitor.deactivated,
+#pulseaudio.output.muted,
+#pulseaudio.input.source-muted,
+#wireplumber.muted {
+	color: @warning;
+}
+
+/*-------------
+	warning
+-------------*/
+
+#memory.warning,
+#cpu.warning,
+#battery.warning {
+	color: @warning;
+}
+
+/*--------------
+	critical
+--------------*/
+
+#temperature.critical,
+#memory.critical,
+#cpu.critical,
+#battery.critical {
+	color: @critical;
+}
+
+/*--------------
+	charging
+--------------*/
+
+#battery.charging {
+	color: shade(@color10, 1.5);
+}
+
+
+
+@import "prefer.css";

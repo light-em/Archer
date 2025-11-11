@@ -1,0 +1,56 @@
+{
+    "logo": null,
+    "display": { 
+        "bar": { 
+            "char": { "elapsed": "/", "total": "/" },
+            "width": 20
+        },
+        "percent": {
+            "type": 2,
+            "color": { "green": "#f00000", "yellow": "#f00000" },
+            "ndigits": 2
+        },
+        // "color": "#3A7ECD",
+        "separator": "  "
+    },
+// PC / CPU / GPU0 / GPU1/ RAM / SWAP / DISK / Monitor / Wifi OS / kernel / Shell / LM / WM / Theme / Font / Term / Explorer /
+    "modules": [
+        "break",
+        { "keyColor": "#6B9EDA", "key": "  =>>", "outputColor": "underline_#6B9EDA", "type": "title", "format": "{user-name}@{host-name}" },
+        "break",
+
+        { "outputColor": "#DAA76B", "type": "custom", "format": "  << PLATFORM >>" },
+        { "key": " ╭───────────╮", "keyColor": "#2F8D5F", "type": "custom" },
+        { "key": " │  distro  │", "keyColor": "#2F8D5F", "outputColor": "#bbb", "type": "os" },
+        { "key": " │  kernel  │", "keyColor": "#2F8D5F", "outputColor": "#bbb", "type": "kernel" },
+        { "key": " │  shell   │", "keyColor": "#2F8D5F", "outputColor": "#bbb", "type": "shell" },
+        { "key": " │  wm      │", "keyColor": "#2F8D5F", "outputColor": "#bbb", "type": "wm" },
+        { "key": " │  theme   │", "keyColor": "#2F8D5F", "outputColor": "#bbb", "type": "custom", "format": "Wallust Engine" },
+        { "key": " │  font    │", "keyColor": "#2F8D5F", "outputColor": "#bbb", "type": "terminalfont" },
+        { "key": " │  term    │", "keyColor": "#2F8D5F", "outputColor": "#bbb", "type": "terminal" },
+        { "key": " │  explore │", "keyColor": "#2F8D5F", "outputColor": "#bbb", "type": "yazi" },
+        { "key": " ╰───────────╯", "keyColor": "#2F8D5F", "type": "custom" },
+
+        { "outputColor": "#DAA76B", "type": "custom", "format": "  << HARDWARE >>" },
+        { "key": " ╭───────────╮", "keyColor": "#989B00", "type": "custom" },
+        { "key": " │   pc     │", "keyColor": "#989B00", "outputColor": "#ccc", "type": "host", "format": "{5} {1} ({2})" },
+        { "key": " │   cpu    │", "keyColor": "#989B00", "outputColor": "#ccc", "type": "cpu", "format": "{1} ({3}) @ {7} GHz" },
+        { "key": " │ 󰢮  gpu    │", "keyColor": "#989B00", "outputColor": "#ccc", "type": "gpu", "format": "{1} {2} @ {12} GHz" },
+        { "key": " │   output │", "keyColor": "#989B00", "outputColor": "#ccc", "type": "monitor", "format": "{1} px @ {2} Hz - {3} mm ({4} inches, {5} pp)" },
+        { "key": " ╰───────────╯", "keyColor": "#989B00", "type": "custom" },
+       
+        { "outputColor": "#DAA76B", "type": "custom", "format": "  << SYS-INFO >>" },
+        { "key": " ╭───────────╮", "keyColor": "#3A7ECD", "type": "custom" },
+        { "key": " │   memory │", "keyColor": "#3A7ECD", "outputColor": "#ccc", "type": "memory" },
+        { "key": " │ 󰉉  disk   │", "keyColor": "#3A7ECD", "outputColor": "#ccc", "type": "disk", "folders": "/" },
+        { "key": " │   packs  │", "keyColor": "#3A7ECD", "outputColor": "#ccc", "type": "packages" },
+        { "key": " │   uptime │", "keyColor": "#3A7ECD", "outputColor": "#ccc", "type": "uptime" },
+        // { "key": " │ 󰓡  swap   │", "keyColor": "#3A7ECD", "outputColor": "#ccc", "type": "swap" },
+        { "key": " │   dtime  │", "keyColor": "#3A7ECD", "outputColor": "#ccc", "type": "datetime"},
+        { "key": " ╰───────────╯", "keyColor": "#3A7ECD", "type": "custom" },
+
+        { "keyColor": "#6B9EDA", "key": "  =>>", "type": "colors", "symbol": "square" },
+        "break"
+    ]
+}
+

@@ -1,0 +1,94 @@
+/* // FORKED FROM: https://github.com/Anik200/dotfiles/tree/super-waybar */
+/* // NO LICENSE (PUBLIC GIT) */
+/* // Redesigned By: PrinceDevel */
+/* // Also Linked With Wallust Theme Engine */
+
+
+@import "theme.css";
+
+* {
+    all: initial;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+window { font-size: 16px; color: white; }
+
+#window label,
+#mpd,
+tooltip label 
+{ font-weight: normal; }
+
+#waybar > box {
+    border: 3px solid @outline;
+    padding: 4px 12px;
+    background-color: @main-bg;
+    border-radius: 12px;
+}
+tooltip, #tray menu{
+	border: 2px solid @tooltip-col;
+	border-radius: 10px;
+	background-color: @main-bg;
+}
+tooltip > box, #tray menu { padding: 2px 6px; }
+#workspaces button {
+    font-size: 1.2em;
+    min-width: 1em;
+    margin-right: 0.6em;
+}
+
+#custom-separator-right, #custom-separator-left, #custom-separator { font-size: 1.2em; }
+#custom-separator-left { margin-right: 0.5em; color: @accent }
+#custom-separator-right { margin-left: 0.5em; color: @accent }
+#custom-separator { min-width: 1em; color: @accent1; font-size: 1em; }
+#temperature { margin-right: 0.5em; }
+#windowcount { margin-right: 0.5em; }
+
+#custom-notification { padding-right: 2px; font-size: 1.2em; } 
+#clock.time, #backlight, #bluetooth, #custom-power_menu, #custom-notification { margin-left: 0.5em; }
+#network, #bluetooth, #custom-power_menu { font-size: 1.2em;  }
+#network { padding-right: 0.375em; }
+#pulseaudio.input { padding-right: 0.5em; }
+
+#cpu, #memory, #temperature, #bluetooth, #network { color: shade(@color4, 1.6); }
+#windowcount, #window { color: shade(@accent, 2); }
+#clock.date, #clock.time { color: shade(@color5, 1.6); }
+#battery { color: shade(@color10, 1.5); }
+
+
+#tray > .passive { -gtk-icon-effect: dim; }
+/* TO BE TESTED */
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @critical;
+}
+
+#idle_inhibitor.deactivated,
+/* #mpd.playing, */
+#pulseaudio.output.muted,
+#pulseaudio.input.source-muted,
+#wireplumber.muted {
+	color: @warning;
+}
+
+#memory.warning,
+#cpu.warning,
+#battery.warning {
+	color: @warning;
+}
+
+#temperature.critical,
+#memory.critical,
+#cpu.critical,
+#battery.critical {
+	color: @critical;
+}
+
+#battery.charging {
+	color: shade(@color10, 1.5);
+}
+
+@import "prefer.css";

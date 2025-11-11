@@ -1,0 +1,36 @@
+{
+    // "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "~/.config/fastfetch/ascii/cat.txt",
+        "padding": {
+            "top": 1,
+            "right": 2,
+            // "left": 4
+        },
+        // "height": 20
+    },
+    "display": { 
+        "bar": { 
+            "char": { "elapsed": "/", "total": "/" },
+            "width": 20
+        },
+        "separator": "  "
+    },
+    "modules": [
+        "break",
+        { "keyColor": "{{<||accent||>| lighten(0.25)}}", "key": "  =>>", "outputColor": "underline_{{<||accent||>| lighten(0.25)}}", "type": "title", "format": "{user-name}@{host-name}" },
+        { "key": " ╭───────────╮", "keyColor": "{{color2}}", "type": "custom" },
+        { "key": " │  distro  │", "keyColor": "{{color2}}", "outputColor": "#bbb", "type": "os" },
+        { "key": " │  kernel  │", "keyColor": "{{color2}}", "outputColor": "#bbb", "type": "kernel" },
+        { "key": " │  shell   │", "keyColor": "{{color2}}", "outputColor": "#bbb", "type": "shell" },
+        { "key": " │  wm      │", "keyColor": "{{color2}}", "outputColor": "#bbb", "type": "wm" },
+        { "key": " │  theme   │", "keyColor": "{{color2}}", "outputColor": "#bbb", "type": "custom", "format": "Wallust Engine" },
+        { "key": " │  font    │", "keyColor": "{{color2}}", "outputColor": "#bbb", "type": "terminalfont" },
+        { "key": " │  term    │", "keyColor": "{{color2}}", "outputColor": "#bbb", "type": "terminal" },
+        { "key": " │  explore │", "keyColor": "{{color2}}", "outputColor": "#bbb", "type": "yazi" },
+        { "key": " ╰───────────╯", "keyColor": "{{color2}}", "type": "custom" },
+        { "keyColor": "{{<||accent||>| lighten(0.25)}}", "key": "  =>>", "type": "colors", "symbol": "square" },
+        "break"
+    ]
+}
+

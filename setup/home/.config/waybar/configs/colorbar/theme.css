@@ -1,0 +1,54 @@
+/* // Inspired From Others Configs ... Arkboi-waybar/iconicbar/mechabar/etc... */
+/* // Written By PrinceDevel */
+/* // Uses Custom Modules and Wallust Theme Engine */
+/* // License: None Cause I made it */
+
+/*
+* back - color 0 (dark)
+* red - color 1
+* green
+* yellow 
+* blue
+* purple
+* special grayscale themed
+* fore - color 7 (light)
+* next 8 are there lighter version or same
+*/
+
+
+@define-color accent        {{<||accent||> | saturate(0.5) | darken(0.25)}};
+@define-color tooltip-col   {{<||accent||> | saturate(1) | darken(0.25)}};
+@define-color main-bg       rgba({{<||accent||> | saturate(1) | darken(0.9) | rgb}}, 0.8);
+@define-color main-fg       {{foreground}};
+@define-color hover-bg      {{<||accent||> | saturate(1) | darken(0.7)}};
+@define-color hover-fg      rgba({{foreground|rgb}}, 0.75);
+@define-color outline       rgba({{<||accent||>| lighten(0.4) | rgb}}, 0.25);
+
+@define-color warning       {{color11 | lighten(0.25)}};
+@define-color critical      {{color9}};
+@define-color charging      {{color10}};
+
+@define-color accent1        {{<||accent||> | darken(0.65)}};
+@define-color accent2        {{<||accent||> | darken(0.7)}};
+@define-color accent3        {{<||accent||> | darken(0.75)}};
+
+@define-color background {{background}};
+@define-color foreground {{foreground}};
+@define-color color0 {{color0}};
+@define-color color1 {{color1}};
+@define-color color2 {{color2}};
+@define-color color3 {{color3}};
+@define-color color4 {{color4}};
+@define-color color5 {{color5}};
+@define-color color6 {{color6}};
+@define-color color7 {{color7}};
+@define-color color8 {{color8}};
+@define-color color9 {{color9}};
+@define-color color10 {{color10}};
+@define-color color11 {{color11}};
+@define-color color12 {{color12}};
+@define-color color13 {{color13}};
+@define-color color14 {{color14}};
+@define-color color15 {{color15}};
+@define-color color_accent {{<||accent||>}};
+

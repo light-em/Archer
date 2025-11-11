@@ -1,0 +1,16 @@
+.config/fastfetch   | fastfetch
+.config/hypr        | hyprland
+.config/kitty       | kitty
+.config/mpd         | mpd
+.config/nvim        | nvim
+.config/rmpc        | rmpc
+.config/rofi        | rofi
+.config/swaync      | swaync
+.config/wallust     | wallust
+.config/waybar      | waybar
+.config/yazi        | yazi
+
+.config/zsh         | zsh
+.zprofile           | zsh
+
+

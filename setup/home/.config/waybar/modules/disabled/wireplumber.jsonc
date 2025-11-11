@@ -1,0 +1,77 @@
+{
+	"group/wireplumber": {
+		"orientation": "horizontal",
+		"modules": [
+			"wireplumber#output",
+			"wireplumber#input"
+		],
+		"drawer": {
+			// "transition-duration":
+			"transition-left-to-right": false
+			// "children-class":
+			// "click-to-reveal":
+		}
+	},
+
+	/*-------------------
+		output device
+	-------------------*/
+	"wireplumber#output": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂰 {volume}%",
+        "format-bluetooth-muted": "󰂲 {icon}",
+        "format-muted": "  00%",
+        "tooltip-format": " => {volume}%\n[{node_name}]",
+        "format-icons": {
+            "headphone": "󰋋 ",
+            "hands-free": "󰋍 ",
+            "headset": "󰋎 ",
+            "phone": "󰏲 ",
+            "portable": "󰄝 ",
+            "car": "󰄋 ",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol-qt",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ -5%",
+		"min-length": 7,
+		"max-length": 7,
+        "node-type": "Audio/Sink"
+		// "max-volume":
+		// "ignored-sinks":
+		// "reverse-scrolling":
+		// "reverse-mouse-scrolling":
+	},
+
+	/*----------------
+		microphone
+	----------------*/
+
+    "wireplumber#input": {
+		// "format-bluetooth":
+		// "format-muted":
+		"format": " {volume}%",
+		"format-muted": " 00%",
+		// "format-icons":
+		// "rotate":
+		// "states":
+		"min-length": 7,
+		"max-length": 7,
+		// "on-click-middle":
+		// "on-click-right":
+		// "smooth-scrolling-threshold":
+		// "tooltip":
+		// "max-volume":
+		// "ignored-sinks":
+		// "reverse-scrolling":
+		// "reverse-mouse-scrolling":
+        "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-right": "pavucontrol-qt",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ +5%",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ -5%",
+        "tooltip-format": "{source_desc} => {source_volume}%\n[{node_name}]",
+        "scroll-step": 5,
+        "node-type": "Audio/Source"
+	}
+}

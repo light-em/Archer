@@ -1,0 +1,49 @@
+/*
+* back - color 0 (dark)
+* red - color 1
+* green
+* yellow 
+* blue
+* purple
+* special grayscale themed
+* fore - color 7 (light)
+* next 8 are there lighter version or same
+*/
+
+
+@define-color accent        #BF9250;
+@define-color tooltip-col   #BF7000;
+@define-color main-bg       rgba(26,15,0, 0.8);
+@define-color main-fg       #FFEED6;
+@define-color hover-bg      #4C2D00;
+@define-color hover-fg      rgba(255,238,214, 0.75);
+@define-color outline       rgba(255,245,230, 0.25);
+
+@define-color warning       #D8DB40;
+@define-color critical      #CA5447;
+@define-color charging      #00994F;
+
+@define-color accent1        #59534B;
+@define-color accent2        #4C4740;
+@define-color accent3        #403C36;
+
+@define-color background #050616;
+@define-color foreground #FFEED6;
+@define-color color0 #202136;
+@define-color color1 #A8544B;
+@define-color color2 #2F8D5F;
+@define-color color3 #989B00;
+@define-color color4 #3A7ECD;
+@define-color color5 #CD3A91;
+@define-color color6 #00B7BF;
+@define-color color7 #FFEED6;
+@define-color color8 #454658;
+@define-color color9 #CA5447;
+@define-color color10 #00994F;
+@define-color color11 #CBCF00;
+@define-color color12 #0075FF;
+@define-color color13 #FF0096;
+@define-color color14 #00F4FF;
+@define-color color15 #FFEED6;
+@define-color color_accent #FFEED6;
+

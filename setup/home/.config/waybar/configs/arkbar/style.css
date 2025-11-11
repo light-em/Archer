@@ -1,0 +1,101 @@
+/* // Inspired From Arkboi's Waybar Config */
+/* // Redesigned By PrinceDevel */
+/* // Uses Custom Modules and Wallust Theme Engine */
+
+
+@import "theme.css";
+
+* {
+    all: initial;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+window { background-color: @main-bg; font-size: 16px; font-weight: bold;}
+#waybar > box { margin: 0px 7px; }
+
+
+#workspaces, #status, #hyprkit, #mpd, #traynotif, #clockin, #sliding, #connect, #battery {
+    padding: 0.25em 0.15em;
+    margin-right: 0.5em;
+    border-bottom: 2px solid white;
+}
+#traynotif, #clockin, #sliding, #connect, #battery { margin-right: 0em; margin-left: 0.5em; padding: 0.25em 0.375em; }
+#workspaces.default button {
+    padding: 0.1em 0.7em;
+    margin: 0.1em 0.2em;
+    border-radius: 3px;
+    font-weight: normal;
+}
+#workspaces.default button.active {
+    background-color: shade(@accent, 1.8);
+    font-weight: 800;
+    min-width: 1.5em;
+    color: @background;
+}
+#workspaces.default button:hover {
+    background-color: shade(@accent, 1.2);
+}
+
+#status, #connect { color: shade(@color4, 1.6); border-bottom-color: shade(@color4, 1.6); }
+#mpd, #battery { padding: 0.25em 0.75em; }
+#hyprkit { color: shade(@accent, 2); }
+#clockin { color: shade(@color5, 1.6); border-bottom-color: shade(@color5, 1.6); }
+#battery { color: shade(@color10, 1.5); border-bottom-color: shade(@color10, 1.5); }
+
+#cpu, #memory, #temperature, #windowcount, #window, #clock.date, #clock.time, #pulseaudio.input, #pulseaudio.output, #backlight {
+    padding: 0.2em 0.5em;
+    margin: 0em 0.2em;
+    border-radius: 3px;
+}
+#tray, #custom-notification, #bluetooth, #network {
+    padding: 0.2em 0.5em;
+    border-radius: 3px;
+}
+/* ICONS CORRECTION */
+#network, #bluetooth, #custom-power_menu, #custom-notification { font-size: 1.2em;  }
+#network { padding-right: 0.875em; }
+
+tooltip, #tray menu {
+	border: 2px solid @tooltip-col;
+	border-radius: 6px;
+	background-color: @main-bg;
+}
+tooltip > box, #tray menu { padding: 2px 6px; }
+
+
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgb(200, 80,80);
+}
+
+#idle_inhibitor.deactivated,
+/* #mpd.playing, */
+#pulseaudio.output.muted,
+#pulseaudio.input.source-muted,
+#wireplumber.muted {
+	color: @warning;
+}
+
+#memory.warning,
+#cpu.warning,
+#battery.warning {
+	color: @warning;
+}
+
+#temperature.critical,
+#memory.critical,
+#cpu.critical,
+#battery.critical {
+	color: @critical;
+}
+
+#battery.charging {
+	color: shade(@color10, 1.5);
+}
+
+@import "prefer.css";

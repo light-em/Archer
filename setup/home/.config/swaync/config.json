@@ -1,0 +1,146 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "control-center-margin-top": 140,
+  "control-center-margin-bottom": 0,
+  "control-center-margin-right": 15,
+  "control-center-margin-left": 0,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 8,
+  "timeout-low": 4,
+  "timeout-critical": 0,
+  "fit-to-screen": false,
+  "control-center-width": 500,
+  "control-center-height": 880,
+  "notification-window-width": 500,
+  "notification-window-height": 200,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "scripts": {
+    "example-script": {
+      "exec": "echo 'Do something...'",
+      "urgency": "Normal"
+    }
+  },
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "normal",
+      "app-name": "Spotify"
+    }
+  },
+  "widgets": [
+    "menubar#label",
+    "buttons-grid",
+    "backlight",
+    "volume",
+    "mpris",
+    "title",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 1,
+      "text": "Controll Center"
+    },
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 12
+    },
+    "backlight": {
+      "label": " ",
+      "device": "intel_backlight",
+      "min": 10
+    },
+    "volume": {
+      "label": " "
+    },
+    "menubar#label": {
+      "menu#power-buttons": {
+        "label": " ", 
+        "position": "right",
+        "actions": [ 
+          {
+            "label": "   Reboot",
+            "command": "reboot"
+          },
+          {
+            "label": "   Lock",
+            "command": "hyprlock"
+          },
+          {
+            "label": "   Logout",
+            "command": "hyprctl dispatch exit"
+          },
+          {
+            "label": "   Shut down",
+            "command": "shutdown now"
+          }
+        ]
+      },
+      "menu#powermode-buttons": {
+        "label": "", 
+        "position": "left",
+        "actions": [ 
+          {
+            "label": "Performance",
+            "command": "kitty --title run-script-output-dialog-float pkexec auto-cpufreq --force performance"
+          },
+          {
+            "label": "Balanced-Default",
+            "command": "kitty --title run-script-output-dialog-float pkexec auto-cpufreq --force reset"
+          },
+          {
+            "label": "Power-Saver",
+            "command": "kitty --title run-script-output-dialog-float pkexec auto-cpufreq --force powersave"
+          }
+        ]
+      },
+      "menu#screenshot-buttons": {
+        "label": "",
+        "position": "left",
+        "actions": [
+          {
+            "label": "Monitor",
+            "command": "hyprshot -m output"
+          },
+          {
+            "label": "Window",
+            "command": "hyprshot -m window"
+          },
+          {
+            "label": "Region",
+            "command": "hyprshot -m region"
+          }
+        ]
+      }
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰂯",
+          "command": "~/.config/rofi/scripts/rofi-bluetooth.exe"
+        },
+        {
+          "label": "",
+          "command": "kitty --title run-script-output-dialog-float -e nmtui"
+        }
+      ]
+    }
+  }
+}
+

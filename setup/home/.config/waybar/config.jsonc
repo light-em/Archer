@@ -1,0 +1,362 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "mod": "dock",
+  "margin-left": 10,
+  "margin-right": 10,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces#iconicbar",
+    "custom/separator-left",
+    "cpu",
+    "custom/separator",
+    "memory",
+    "custom/separator",
+    "temperature",
+    "custom/separator-left",
+    "hyprland/windowcount",
+    "mpd"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/notification",
+    "custom/separator-right",
+    "clock#time",
+    "custom/separator",
+    "clock#date",
+    "custom/separator-right",
+    "backlight",
+    "custom/separator",
+    "group/pulseaudio",
+    "custom/separator-right",
+    "bluetooth",
+    "custom/separator",
+    "network",
+    "custom/separator",
+    "battery",
+    "custom/separator-right",
+    "custom/power_menu"
+  ],
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+  "custom/separator-right": {
+    "format": "|",
+    "tooltip": false
+  },
+  "custom/separator-left": {
+    "format": "|",
+    "tooltip": false
+  },
+  "margin-bottom": 7,
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "min-length": 5,
+    "max-length": 6,
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-time": "{H} hr {M} min",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "format-charging": "󰉁 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "min-length": 4,
+    "max-length": 7,
+    "tooltip-format": "Discharging -> {time}",
+    "tooltip-format-charging": "Charging -> {time}",
+    "events": {
+      "on-discharging-warning": "notify-send 'Battery Low (20%)' -i 'battery-020'",
+      "on-discharging-critical": "notify-send 'Battery Critical (10%)' -u critical -i 'battery-010'"
+    }
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂰",
+    "format-connected": "󰂱",
+    "min-length": 1,
+    "max-length": 1,
+    "on-click": "~/.config/rofi/scripts/rofi-bluetooth.exe",
+    "on-click-right": "bluetoothctl power off && notify-send 'Bluetooth Off' -i 'network-bluetooth-inactive' -r 1925",
+    "tooltip-format": "Device Addr: {device_address}",
+    "tooltip-format-disabled": "Bluetooth Disabled",
+    "tooltip-format-off": "Bluetooth Off",
+    "tooltip-format-on": "Bluetooth Disconnected",
+    "tooltip-format-connected": "Device: {device_alias}",
+    "tooltip-format-enumerate-connected": "Device: {device_alias}",
+    "tooltip-format-connected-battery": "Device: {device_alias}\nBattery: {device_battery_percentage}%",
+    "tooltip-format-enumerate-connected-battery": "Device: {device_alias}\nBattery: {device_battery_percentage}%"
+  },
+  "clock#time": {
+    "format": "{:%H:%M}",
+    "max-length": 5,
+    "tooltip-format": "Standard Time: {:%I:%M %p}"
+  },
+  "clock#date": {
+    "format": "󰸗 {:%m/%d}",
+    "max-length": 7,
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 6,
+      "format": {
+        "months": "<span alpha='100%'><b>{}</b></span>",
+        "days": "<span alpha='90%'>{}</span>",
+        "weekdays": "<span alpha='80%'><i>{}</i></span>",
+        "today": "<span alpha='100%'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click": "mode"
+    }
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "min-length": 4,
+    "max-length": 7,
+    "states": {
+      "warning": 80,
+      "critical": 90
+    },
+    "tooltip": false
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "󰈉"
+    },
+    "min-length": 3,
+    "max-length": 3,
+    "tooltip-format-activated": "Keep Screen On: <span text_transform='capitalize'>{status}</span>",
+    "tooltip-format-deactivated": "Keep Screen On: <span text_transform='capitalize'>{status}</span>",
+    "start-activated": false
+  },
+  "memory": {
+    "interval": 10,
+    "format": " {percentage}%",
+    "states": {
+      "warning": 75,
+      "critical": 90
+    },
+    "min-length": 4,
+    "max-length": 7,
+    "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB"
+  },
+  "mpd": {
+    "format": "{stateIcon} [{elapsedTime:%M:%S}] {title}",
+    "format-paused": "{stateIcon} [{elapsedTime:%M:%S}]",
+    "format-disconnected": "",
+    "interval": 10,
+    "consume-icons": {
+      "on": " "
+    },
+    "random-icons": {
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "max-length": 25,
+    "tooltip-format": "Name: {title}\n{stateIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S})\nMode -> {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}\nArtist: {artist}\nAlbum: {album}",
+    "on-click": "rmpc togglepause"
+  },
+  "network": {
+    "interval": 10,
+    "format": "󰤨",
+    "format-ethernet": "󰈀",
+    "format-wifi": "{icon}",
+    "format-disconnected": "󰤯",
+    "format-disabled": "󰖪",
+    "format-icons": [
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "min-length": 1,
+    "max-length": 1,
+    "on-click": "kitty --title run-script-output-dialog-float -e nmtui",
+    "on-click-right": "nmcli radio wifi off && notify-send 'Wi-Fi Disabled' -i 'network-wireless-off' -r 1125",
+    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency} GHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+    "tooltip-format-disconnected": "Wi-Fi Disconnected",
+    "tooltip-format-disabled": "Wi-Fi Disabled"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰅸",
+      "none": "󰂜",
+      "dnd-notification": "󰅸",
+      "dnd-none": "󱏨",
+      "inhibited-notification": "󰅸",
+      "inhibited-none": "󰂜",
+      "dnd-inhibited-notification": "󰅸",
+      "dnd-inhibited-none": "󱏨"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click": "swaync-client -t -sw",
+    "escape": true
+  },
+  "custom/power_menu": {
+    "format": "󰤄",
+    "min-length": 1,
+    "max-length": 1,
+    "on-click": "sh ~/.config/rofi/scripts/rofi-script-runner.sh",
+    "tooltip-format": "Power Menu"
+  },
+  "group/pulseaudio": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio#output",
+      "pulseaudio#input"
+    ],
+    "drawer": {
+      "transition-left-to-right": false
+    }
+  },
+  "pulseaudio#output": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂰 {volume}%",
+    "format-bluetooth-muted": "󰂲 0%",
+    "format-muted": " 0%",
+    "tooltip-format": "{desc} => {icon} {volume}%",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰋍",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "portable": "󰄝",
+      "car": "󰄋",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol-qt",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "min-length": 2
+  },
+  "pulseaudio#input": {
+    "format-source": " {volume}%",
+    "format-source-muted": " {volume}%",
+    "format": "{format_source}",
+    "min-length": 4,
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-right": "pavucontrol-qt",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+    "tooltip-format": "{source_desc} => {format_source}",
+    "scroll-step": 5
+  },
+  "temperature": {
+    "critical-threshold": 90,
+    "format": " {temperatureC}°C",
+    "min-length": 5,
+    "max-length": 8,
+    "tooltip-format": "Temp in Fahrenheit: {temperatureF}°F"
+  },
+  "tray": {
+    "icon-size": 22,
+    "spacing": 6,
+    "cursor": true
+  },
+  "hyprland/windowcount": {
+    "format": "[{}]",
+    "swap-icon-label": false
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "": "Desktop",
+      "kitty": "Terminal",
+      "zsh": "Terminal",
+      "~": "Terminal"
+    },
+    "max-length": 25,
+    "swap-icon-label": false
+  },
+  "hyprland/workspaces#mechabar": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 3
+    },
+    "cursor": true
+  },
+  "hyprland/workspaces#iconicbar": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 3
+    },
+    "cursor": true
+  },
+  "hyprland/workspaces#default": {
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": 3
+    },
+    "cursor": true
+  }
+}

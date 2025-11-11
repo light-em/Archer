@@ -1,0 +1,76 @@
+// Inspired From Others Configs ... Arkboi-waybar/iconicbar/mechabar/etc...
+// Written By PrinceDevel
+// Uses Custom Modules and Wallust Theme Engine
+// License: None Cause I made it
+
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  // "margin-left": 10,
+  // "margin-right": 10,
+  // "margin-top": 7,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces#default",
+    "group/status",
+    "mpd"
+  ],
+  "modules-center": [
+    "group/hyprkit"
+  ],
+  "modules-right": [
+    "group/traynotif",
+    "group/clockin",
+    "group/sliding",
+    "group/connect",
+    "battery"
+  ],
+    "group/hyprkit": {
+        "orientation": "horizontal",
+        "modules": [
+            "hyprland/windowcount",
+            "hyprland/window"
+        ]
+    },
+    "group/status": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "temperature"
+        ]
+    },
+    "group/clockin": {
+        "orientation": "horizontal",
+        "modules": [
+            "clock#time",
+            "clock#date"
+        ]
+    },
+    "group/traynotif": {
+        "orientation": "horizontal",
+        "modules": [
+            "tray",
+            "custom/notification"
+        ]
+    },
+    "group/sliding": {
+        "orientation": "horizontal",
+        "modules": [
+            "backlight",
+            "pulseaudio#input",
+            "pulseaudio#output"
+        ]
+    },
+    "group/connect": {
+        "orientation": "horizontal",
+        "modules": [
+            "bluetooth",
+            "network"
+        ]
+    }
+}

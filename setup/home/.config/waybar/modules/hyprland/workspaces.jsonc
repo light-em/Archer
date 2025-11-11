@@ -1,0 +1,37 @@
+{
+	"hyprland/workspaces#mechabar": {
+		"format": "{icon}",
+		"format-icons": {
+ 			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 3
+		},
+		// "on-scroll-up": "hyprctl dispatch workspace +1",
+		// "on-scroll-down": "hyprctl dispatch workspace -1",
+		"cursor": true
+	},
+	"hyprland/workspaces#iconicbar": {
+		"format": "{icon}",
+		"format-icons": {
+ 			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 3
+		},
+		// "on-scroll-up": "hyprctl dispatch workspace +1",
+		// "on-scroll-down": "hyprctl dispatch workspace -1",
+		"cursor": true
+	},
+	"hyprland/workspaces#default": {
+		"format": "{name}",
+		"persistent-workspaces": {
+			"*": 3
+		},
+		// "on-scroll-up": "hyprctl dispatch workspace +1",
+		// "on-scroll-down": "hyprctl dispatch workspace -1",
+		"cursor": true
+	}
+}

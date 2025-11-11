@@ -1,0 +1,66 @@
+// FORKED FROM: https://github.com/Anik200/dotfiles/tree/super-waybar
+// NO LICENSE (PUBLIC GIT)
+// Redesigned By: PrinceDevel
+// Also Linked With Wallust Theme Engine
+
+
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "margin-left": 10,
+  "margin-right": 10,
+  // "margin-top": 5,
+  // "margin-bottom": 5,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces#iconicbar",
+    "custom/separator-left",
+    "cpu",
+    "custom/separator",
+    "memory",
+    "custom/separator",
+    "temperature",
+    "custom/separator-left",
+    "hyprland/windowcount",
+    "mpd"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/notification",
+    "custom/separator-right",
+    "clock#time",
+    "custom/separator",
+    "clock#date",
+    "custom/separator-right",
+    "backlight",
+    "custom/separator",
+    "group/pulseaudio",
+    "custom/separator-right",
+    "bluetooth",
+    "custom/separator",
+    "network",
+    "custom/separator",
+    "battery",
+    "custom/separator-right",
+    "custom/power_menu"
+  ],
+  "custom/separator": {
+        "format": "|",
+        "tooltip": false
+  },
+  "custom/separator-right": {
+    "format": "|",
+        "tooltip": false
+  },
+  "custom/separator-left": {
+    "format": "|",
+        "tooltip": false
+  }
+}

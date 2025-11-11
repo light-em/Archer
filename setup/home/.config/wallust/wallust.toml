@@ -1,0 +1,40 @@
+# How the image is parse, in order to get the colors:
+# full - resized - wal - thumb -  fastresize - kmeans
+backend = "thumb"
+color_space = "lchansi"
+palette = "ansidark16"
+check_contrast = true
+threshold=20
+# saturation=10
+# saturation=100
+# Color saturation, between [1% and 100%] (OPTIONAL, disabled by default)
+# usually something higher than 50 increases the saturation and below
+# decreases it (on a scheme with strong and vivid colors)
+#saturation = 35
+
+# Alpha value for templating, by default 100 (no other use whatsoever)
+#alpha = 100
+
+[templates]
+wallust = { template = 'theme.sh.accent', target = '~/.config/wallust/scripts/theme.sh' } 
+
+kitty = { template = 'kitty.conf.accent', target = '~/.config/kitty/themes/wallust-kitty-gen.conf' }
+yazi = { template = 'yazi.toml.accent', target = '~/.config/yazi/theme.toml' }
+fastfetch-min = { template = 'fetch-minimal.jsonc.accent', target = '~/.config/fastfetch/config.minimal.jsonc' }
+fastfetch = { template = 'fastfetch.jsonc.accent', target = '~/.config/fastfetch/config.jsonc' }
+
+hyprland = { template = 'hyprland.conf.accent', target = '~/.config/hypr/wallust-hypr-gen.conf' }
+waybar = { template = 'waybar.css.accent', target = '~/.config/waybar/theme.css' }
+
+rofi = { template = 'rofi.rasi.accent', target = '~/.config/rofi/colors.rasi' }
+swaync = { template = 'swaync.css.accent', target = '~/.config/swaync/colors.css' }
+
+discord = { template = 'discord.css.accent', target = '~/.config/Vencord/themes/devel-discord.theme.css' }
+qt5ct = { template = 'qtct.conf.accent', target='~/.config/qt5ct/colors/wallust-qt5-gen.conf' }
+qt6ct = { template = 'qtct.conf.accent', target='~/.config/qt6ct/colors/wallust-qt6-gen.conf' }
+
+# NOTE: prefer '' over "" for paths, avoids escaping.
+# template: A RELATIVE path that points to `~/.config/wallust/template` (depends on platform)
+# target: ABSOLUTE path in which to place a file with generated templated values.
+# ¡ If either one is a directory, then both SHOULD be one. !
+# zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }

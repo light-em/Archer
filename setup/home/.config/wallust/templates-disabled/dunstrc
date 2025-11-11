@@ -1,0 +1,55 @@
+[global]
+monitor = 0
+follow = keyboard
+width = (300, 800)
+height = (100, 400)
+origin = top-right
+offset = (17,17)
+scale = 2
+gap_size = 10
+indicate_hidden = yes
+frame_width = 0
+corner_radius = 8
+padding = 12
+horizontal_padding = 12
+enable_posix_regex = true
+font = "SF Mono"
+line_height = 3
+alignment = left
+stack_duplicates = true
+hide_duplicate_count = false
+icon_path = "<add-icon-path>"
+max_icon_size = 128
+markup = full
+format = "<b>%a</b>\n%s\n%b"
+progress_bar = true
+progress_bar_height = 10
+progress_bar_corner_radius = 4
+progress_bar_frame_width = 1
+separator_height = 2
+ignore_dbusclose = false
+force_xwayland = false
+frame_color = "{{color4}}"
+highlight = "{{color5}}"
+separator_color= "{{foreground}}"
+
+[experimental]
+per_monitor_dpi = false
+
+[urgency_low]
+timeout = 2
+background = "{{background | darken(0.1)}}ee"
+foreground = "{{foreground}}"
+frame_color = "{{color4}}"
+
+[urgency_normal]
+timeout = 3
+background = "{{background | darken(0.1)}}80"
+foreground = "{{foreground}}"
+frame_color = "{{color6}}"
+
+[urgency_critical]
+timeout = 4
+background = "{{background | darken(0.1)}}ee"
+foreground = "{{foreground}}"
+frame_color = "{{color9}}"

@@ -1,0 +1,77 @@
+{
+	"group/pulseaudio": {
+		"orientation": "horizontal",
+		"modules": [
+			"pulseaudio#output",
+			"pulseaudio#input"
+		],
+		"drawer": {
+			// "transition-duration":
+			"transition-left-to-right": false
+			// "children-class":
+			// "click-to-reveal":
+		}
+	},
+
+	/*-------------------
+		output device
+	-------------------*/
+
+	"pulseaudio#output": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂰 {volume}%",
+        "format-bluetooth-muted": "󰂲 0%",
+        "format-muted": " 0%",
+        "tooltip-format": "{desc} => {icon} {volume}%",
+        "format-icons": {
+            // "bluetooth-muted": "󰂲",
+            "headphone": "󰋋",
+            "hands-free": "󰋍",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰄝",
+            "car": "󰄋",
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol-qt",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"min-length": 2
+		// "max-volume":
+		// "ignored-sinks":
+		// "reverse-scrolling":
+		// "reverse-mouse-scrolling":
+	},
+
+	/*----------------
+		microphone
+	----------------*/
+
+	"pulseaudio#input": {
+		"format-source": " {volume}%",
+		"format-source-muted": " {volume}%",
+        "format": "{format_source}",
+        // "format-muted": "{format_source_muted}",
+		// "format-bluetooth":
+		// "format-muted":
+		// "format-source": "{icon} {volume}%",
+		// "rotate":
+		// "states":
+		"min-length": 4,
+		// "on-click-middle":
+		// "on-click-right":
+		// "smooth-scrolling-threshold":
+		// "tooltip":
+		// "max-volume":
+		// "ignored-sinks":
+		// "reverse-scrolling":
+		// "reverse-mouse-scrolling":
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-right": "pavucontrol-qt",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+        "tooltip-format": "{source_desc} => {format_source}",
+        "scroll-step": 5
+	}
+}

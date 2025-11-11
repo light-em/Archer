@@ -1,0 +1,106 @@
+# wallust.toml needs to include this
+# konsole = { template = 'konsole', target = '~/.local/share/konsole/wallust.colorscheme' }
+# after generating of colorscheme pick "wallust" colorscheme in Konsole profile settings
+# you can play here with Opacity under [General] if you want, but it must be between 0 and 1
+
+[Background]
+Color={{color0 | rgb}}
+
+[BackgroundFaint]
+Color={{color0 | rgb}}
+
+[BackgroundIntense]
+Color={{color8 | rgb}}
+
+[Color0]
+Color={{color0 | rgb}}
+
+[Color0Faint]
+Color={{color0 | rgb}}
+
+[Color0Intense]
+Color={{color8 | rgb}}
+
+[Color1]
+Color={{color1 | rgb}}
+
+[Color1Faint]
+Color={{color1 | rgb}}
+
+[Color1Intense]
+Color={{color9 | rgb}}
+
+[Color2]
+Color={{color2 | rgb}}
+
+[Color2Faint]
+Color={{color2 | rgb}}
+
+[Color2Intense]
+Color={{color10 | rgb}}
+
+[Color3]
+Color={{color3 | rgb}}
+
+[Color3Faint]
+Color={{color3 | rgb}}
+
+[Color3Intense]
+Color={{color11 | rgb}}
+
+[Color4]
+Color={{color4 | rgb}}
+
+[Color4Faint]
+Color={{color4 | rgb}}
+
+[Color4Intense]
+Color={{color12 | rgb}}
+
+[Color5]
+Color={{color5 | rgb}}
+
+[Color5Faint]
+Color={{color5 | rgb}}
+
+[Color5Intense]
+Color={{color13 | rgb}}
+
+[Color6]
+Color={{color6 | rgb}}
+
+[Color6Faint]
+Color={{color6 | rgb}}
+
+[Color6Intense]
+Color={{color14 | rgb}}
+
+[Color7]
+Color={{color7 | rgb}}
+
+[Color7Faint]
+Color={{color7 | rgb}}
+
+[Color7Intense]
+Color={{color15 | rgb}}
+
+[Foreground]
+Color={{color7 | rgb}}
+
+[ForegroundFaint]
+Color={{color7 | rgb}}
+
+[ForegroundIntense]
+Color={{color15 | rgb}}
+
+[General]
+Anchor=0.5,0.5
+Blur=true
+ColorRandomization=false
+Description=wallust
+FillStyle=Tile
+Opacity=0.75 # set between 0 and 1 or use {{alpha_dec}} if -a key have been used
+Wallpaper=   # {{wallpaper}} can be used here
+WallpaperFlipType=NoFlip
+WallpaperOpacity=   # set between 0 and 1 or use {{alpha_dec}} if -a key have been used
+ 
