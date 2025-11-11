@@ -1,9 +1,9 @@
 .config/fastfetch   | fastfetch
-.config/hypr        | hyprland
+.config/hypr        | hyprland hyprlock sww
 .config/kitty       | kitty
 .config/mpd         | mpd
 .config/nvim        | nvim
-.config/rmpc        | rmpc
+.config/rmpc        | rmpc mpd
 .config/rofi        | rofi
 .config/swaync      | swaync
 .config/wallust     | wallust
