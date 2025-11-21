@@ -3,20 +3,27 @@
         "tooltip": false,
         "format": "{icon}",
         "format-icons": {
-            "notification": "󰅸",
-            "none": "󰂜",
-            "dnd-notification": "󰅸",
-            "dnd-none": "󱏨",
-            "inhibited-notification": "󰅸",
-            "inhibited-none": "󰂜",
-            "dnd-inhibited-notification": "󰅸",
-            "dnd-inhibited-none": "󱏨"
+            // "notification": "󰅸",
+            // "dnd-notification": "󰅸",
+            // "inhibited-notification": "󰅸",
+            // "inhibited-none": "󰂜",
+            // "dnd-inhibited-notification": "󰅸",
+            // "dnd-inhibited-none": "󱏨"
+            "default": "󰂜",
+            // "": "󰂜",
+            "do-not-disturb": "󱏨"
         },
         "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click-right": "swaync-client -d -sw",
-        "on-click": "swaync-client -t -sw",
+        // "exec-if": "which swaync-client",
+        // "exec": "swaync-client -swb",
+        // "on-click-right": "swaync-client -d -sw",
+        // "on-click": "swaync-client",
+        "exec-if": "which makoctl",
+        "on-click-right": "makoctl mode -t do-not-disturb",
+        "on-click": "makoctl restore",
+        "exec": "echo \"{\\\"class\\\": \\\"$(makoctl mode | grep do-not-disturb)\\\", \\\"alt\\\": \\\"$(makoctl mode | grep do-not-disturb)\\\"}\"",
+        "interval": 1,
+        "on-click": "makoctl restore",
         "escape": true
     }
 }

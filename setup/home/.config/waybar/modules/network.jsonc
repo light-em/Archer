@@ -17,7 +17,7 @@
 		"min-length": 1,
 		"max-length": 1,
 		// "on-click-middle":
-        "on-click": "kitty --title run-script-output-dialog-float -e nmtui",
+        "on-click": "kitty --title run-script-output-dialog-float -e impala",
 		"on-click-right": "nmcli radio wifi off && notify-send 'Wi-Fi Disabled' -i 'network-wireless-off' -r 1125",
 		// "on-scroll-up":
 		// "on-scroll-down":

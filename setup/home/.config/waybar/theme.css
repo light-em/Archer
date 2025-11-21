@@ -11,39 +11,39 @@
 */
 
 
-@define-color accent        #16529A;
-@define-color tooltip-col   #00479A;
-@define-color main-bg       rgba(0,9,21, 0.8);
-@define-color main-fg       #FFF9DC;
-@define-color hover-bg      #001C3E;
-@define-color hover-fg      rgba(255,249,220, 0.75);
-@define-color outline       rgba(137,178,225, 0.25);
+@define-color accent        #99994A;
+@define-color tooltip-col   #999900;
+@define-color main-bg       rgba(20,20,0, 0.8);
+@define-color main-fg       #FFFFFF;
+@define-color hover-bg      #3D3D00;
+@define-color hover-fg      rgba(255,255,255, 0.75);
+@define-color outline       rgba(224,224,221, 0.25);
 
-@define-color warning       #D8DB40;
-@define-color critical      #FF6F5A;
-@define-color charging      #00994F;
+@define-color warning       #FEB157;
+@define-color critical      #F92672;
+@define-color charging      #82B414;
 
-@define-color accent1        #142C48;
-@define-color accent2        #11263E;
-@define-color accent3        #0E2033;
+@define-color accent1        #474745;
+@define-color accent2        #3D3D3B;
+@define-color accent3        #333332;
 
-@define-color background #101413;
-@define-color foreground #FFF9DC;
-@define-color color0 #2F3333;
-@define-color color1 #C56555;
-@define-color color2 #2F8D5F;
-@define-color color3 #989B00;
-@define-color color4 #3A7ECD;
-@define-color color5 #CD3A91;
-@define-color color6 #00B7BF;
-@define-color color7 #FFF9DC;
-@define-color color8 #515555;
-@define-color color9 #FF6F5A;
-@define-color color10 #00994F;
-@define-color color11 #CBCF00;
-@define-color color12 #0D7CFF;
-@define-color color13 #FF0096;
-@define-color color14 #00F4FF;
-@define-color color15 #FFF9DC;
-@define-color color_accent #3A7ECD;
+@define-color background #010101;
+@define-color foreground #FFFFFF;
+@define-color color0 #1B1D1E;
+@define-color color1 #F92672;
+@define-color color2 #82B414;
+@define-color color3 #FD971F;
+@define-color color4 #4E82AA;
+@define-color color5 #8C54FE;
+@define-color color6 #465457;
+@define-color color7 #CCCCC6;
+@define-color color8 #505354;
+@define-color color9 #F92672;
+@define-color color10 #82B414;
+@define-color color11 #FD971F;
+@define-color color12 #4E82AA;
+@define-color color13 #8C54FE;
+@define-color color14 #465457;
+@define-color color15 #CCCCC6;
+@define-color color_accent #CCCCC6;
 

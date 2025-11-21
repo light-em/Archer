@@ -1,10 +1,9 @@
 # vim:fileencoding=utf-8:foldmethod=marker
-include themes/wallust-kitty-gen.conf
+include theme/matugen-colors.conf
 
 font_family JetBrainsMono Nerd Font
 font_size 12
 window_padding_width 0
 tab_bar_style powerline
 confirm_os_window_close 0
-background_opacity 0.75
-
+background_opacity 0.8

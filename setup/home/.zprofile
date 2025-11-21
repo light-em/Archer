@@ -23,7 +23,6 @@ export PYTHON_HISTORY="$XDG_DATA_HOME/python/history"
 
 # -- Apps Specific Config
 export SCREENSHOT_DIR="$HOME/stored-data/screenshots"
-export HYPRSHOT_DIR=$SCREENSHOT_DIR
 export WALLPAPER_DIR="$HOME/ui-data/wallpapers"
 export QT_SCALE_FACTOR=1.25
 

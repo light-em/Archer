@@ -27,9 +27,12 @@ hyprland = { template = 'hyprland.conf.accent', target = '~/.config/hypr/wallust
 waybar = { template = 'waybar.css.accent', target = '~/.config/waybar/theme.css' }
 
 rofi = { template = 'rofi.rasi.accent', target = '~/.config/rofi/colors.rasi' }
-swaync = { template = 'swaync.css.accent', target = '~/.config/swaync/colors.css' }
+# swaync = { template = 'swaync.css.accent', target = '~/.config/swaync/colors.css' }
+# dunst = { template = 'dunst.rc.accent', target = '~/.config/dunst/dunstrc' }
+mako = { template = 'mako.conf.accent', target = '~/.config/mako/config' }
 
-discord = { template = 'discord.css.accent', target = '~/.config/Vencord/themes/devel-discord.theme.css' }
+# discord = { template = 'discord.css.accent', target = '~/.config/Vencord/themes/devel-discord.theme.css' }
+vesktop = { template = 'discord.css.accent', target = '~/.config/vesktop/themes/devel-discord.theme.css' }
 qt5ct = { template = 'qtct.conf.accent', target='~/.config/qt5ct/colors/wallust-qt5-gen.conf' }
 qt6ct = { template = 'qtct.conf.accent', target='~/.config/qt6ct/colors/wallust-qt6-gen.conf' }
 

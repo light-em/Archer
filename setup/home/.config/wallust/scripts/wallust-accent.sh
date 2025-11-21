@@ -56,5 +56,7 @@ if [[ "$1" == "--run" ]]; then
         wallust theme $wallpaper ${@:2}
     fi
     rm $WALLUST_DIR/templates/*.accent 
-    swaync-client -R -rs
+    makoctl reload
+    # dunstctl reload
+    # swaync-client -R -rs
 fi

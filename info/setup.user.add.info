@@ -13,4 +13,5 @@
 .config/zsh         | zsh
 .zprofile           | zsh
 
-
+music/spot-music.sh | spotdl
+music/yt-music.sh   | yt-dlp

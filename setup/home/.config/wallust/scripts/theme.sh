@@ -1,29 +1,29 @@
-cursor="#FFF9DC"
-background="#101413"
-foreground="#FFF9DC"
+cursor="#FF5995"
+background="#010101"
+foreground="#FFFFFF"
 
-wallpaper="/home/devel/ui-data/wallpapers/wall_japan_city_two_girls.jpg"
+wallpaper="sexy-nancy"
 backend="thumb"
 
-color0="#2F3333"
-color1="#C56555"
-color2="#2F8D5F"
-color3="#989B00"
-color4="#3A7ECD"
-color5="#CD3A91"
-color6="#00B7BF"
-color7="#FFF9DC"
-color8="#515555"
-color9="#FF6F5A"
-color10="#00994F"
-color11="#CBCF00"
-color12="#0D7CFF"
-color13="#FF0096"
-color14="#00F4FF"
-color15="#FFF9DC"
+color0="#1B1D1E"
+color1="#F92672"
+color2="#82B414"
+color3="#FD971F"
+color4="#4E82AA"
+color5="#8C54FE"
+color6="#465457"
+color7="#CCCCC6"
+color8="#505354"
+color9="#F92672"
+color10="#82B414"
+color11="#FD971F"
+color12="#4E82AA"
+color13="#8C54FE"
+color14="#465457"
+color15="#CCCCC6"
 
-accent="#3A7ECD"
-r=0.2275
-g=0.4941
-b=0.8039
+accent="#CCCCC6"
+r=0.8000
+g=0.8000
+b=0.7765
 

@@ -1,4 +1,14 @@
 scripts_name=(
+
+    # "Setup Virtual Audio Link"
+    # "Reset Virtual Audio Link"
+    "Toggle Virtual Audio Link"
+    "Toggle Eye-Candy"
+    
+    "auto-cpufreq default"
+    "auto-cpufreq powersave"
+    "auto-cpufreq performance"
+
     "Theme Switch"
     "Waybar Switch"
     "Wallpaper Switch"
@@ -6,10 +16,6 @@ scripts_name=(
 
     "Regen Theme"
     "Theme Accent Switch"
-
-    "Toggle Waybar"
-    "Setup Virtual Audio Link"
-    "Reset Virtual Audio Link"
 
     "Hpyrshot Window"
     "Hyprshot Output"
@@ -21,9 +27,18 @@ scripts_name=(
     "Sleep"
     "Lock"
     "Logout"
+    "Reboot"
     "Shutdown"
 )
 scripts_str=(
+
+    "$HOME/.config/mpd/scripts/toggle-virtual-audio-link.sh"
+    "$HOME/.config/mpd/scripts/toggle-eye-candy.sh"
+
+    "pkexec auto-cpufreq --force reset"
+    "pkexec auto-cpufreq --force powersave"
+    "pkexec auto-cpufreq --force performance"
+
     "$HOME/.config/wallust/scripts/wallust-set-theme.sh"
     "$HOME/.config/waybar/scripts/waybar-switch.sh"
     "$HOME/.config/hypr/scripts/swww_wall_selector.sh"
@@ -32,10 +47,6 @@ scripts_str=(
     "sh $HOME/.config/wallust/scripts/wallust-accent.sh --run"
     "sh $HOME/.config/wallust/scripts/wallust-set-accent.sh; sh $HOME/.config/wallust/scripts/wallust-accent.sh --run "
 
-    "$HOME/.config/waybar/scripts/waybar-toggle.sh"
-    "$HOME/.config/mpd/scripts/setup-virtual-audio-link.sh"
-    "$HOME/.config/mpd/scripts/reset-virtual-audio-link.sh"
-
     "hyprshot -m window"
     "hyprshot -m output"
     "hyprshot -m region"
@@ -43,9 +54,10 @@ scripts_str=(
     "hyprctl keyword general:layout dwindle"
     "hyprctl keyword general:layout scrolling"
 
-    "systemctl suspend"
+    "hyprlock && systemctl suspend"
     "hyprlock"
     "hyprctl dispatch exit"
+    "reboot"
     "shutdown now"
 )
 scripts_run_type=(
@@ -55,16 +67,19 @@ scripts_run_type=(
     # 3 -> script interactive
     3
     2
+
+    1
+    1
+    1
+
+    3
+    2
     2
     3
 
     1
     0
 
-    2
-    3
-    3
-
     0
     0
     0
@@ -72,6 +87,7 @@ scripts_run_type=(
     0
     0
 
+    0
     0
     0
     0

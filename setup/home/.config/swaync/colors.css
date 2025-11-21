@@ -1,30 +1,30 @@
 :root {
-    --wallpaper: url("/home/devel/ui-data/wallpapers/wall_japan_city_two_girls.jpg");
+    --wallpaper: url("/home/devel/ui-data/wallpapers/live_13_classic_car_by_1Eni1.gif");
 
     /* Special */
-    --background: 16,20,19;
-    --foreground: 255,249,220;
-    --cursor: 255,249,220;
-    --accent1: 58,126,205;
-    --accent2: 46,101,164;
-    --accent3: 35,76,123;
-    --accent4: 17,38,62;
+    --background: 5,6,22;
+    --foreground: 255,238,214;
+    --cursor: 255,238,214;
+    --accent1: 202,84,71;
+    --accent2: 162,67,57;
+    --accent3: 121,50,43;
+    --accent4: 61,25,21;
 
     /* Colors */
-    --color0:  47,51,51;
-    --color1:  197,101,85;
+    --color0:  32,33,54;
+    --color1:  168,84,75;
     --color2:  47,141,95;
     --color3:  152,155,0;
     --color4:  58,126,205;
     --color5:  205,58,145;
     --color6:  0,183,191;
-    --color7:  255,249,220;
-    --color8:  81,85,85;
-    --color9:  255,111,90;
+    --color7:  255,238,214;
+    --color8:  69,70,88;
+    --color9:  202,84,71;
     --color10: 0,153,79;
     --color11: 203,207,0;
-    --color12: 13,124,255;
+    --color12: 0,117,255;
     --color13: 255,0,150;
     --color14: 0,244,255;
-    --color15: 255,249,220;
+    --color15: 255,238,214;
 }

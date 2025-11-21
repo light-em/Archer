@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
   "mod": "dock",
   "margin-left": 10,
   "margin-right": 10,
@@ -55,7 +55,7 @@
     "format": "|",
     "tooltip": false
   },
-  "margin-bottom": 7,
+  "margin-top": 7,
   "backlight": {
     "format": "{icon} {percent}%",
     "format-icons": [
@@ -223,7 +223,7 @@
     ],
     "min-length": 1,
     "max-length": 1,
-    "on-click": "kitty --title run-script-output-dialog-float -e nmtui",
+    "on-click": "kitty --title run-script-output-dialog-float -e impala",
     "on-click-right": "nmcli radio wifi off && notify-send 'Wi-Fi Disabled' -i 'network-wireless-off' -r 1125",
     "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency} GHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
     "tooltip-format-disconnected": "Wi-Fi Disconnected",
@@ -233,20 +233,15 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "󰅸",
-      "none": "󰂜",
-      "dnd-notification": "󰅸",
-      "dnd-none": "󱏨",
-      "inhibited-notification": "󰅸",
-      "inhibited-none": "󰂜",
-      "dnd-inhibited-notification": "󰅸",
-      "dnd-inhibited-none": "󱏨"
+      "default": "󰂜",
+      "do-not-disturb": "󱏨"
     },
     "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click-right": "swaync-client -d -sw",
-    "on-click": "swaync-client -t -sw",
+    "exec-if": "which makoctl",
+    "on-click-right": "makoctl mode -t do-not-disturb",
+    "on-click": "makoctl restore",
+    "exec": "echo \"{\\\"class\\\": \\\"$(makoctl mode | grep do-not-disturb)\\\", \\\"alt\\\": \\\"$(makoctl mode | grep do-not-disturb)\\\"}\"",
+    "interval": 1,
     "escape": true
   },
   "custom/power_menu": {
